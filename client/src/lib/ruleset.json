@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rule_001",
+    "match": {
+      "processo": "conhecimento",
+      "fase": "apos_decisao",
+      "ato": "decisao_interlocutoria",
+      "tema": "prova"
+    },
+    "result": {
+      "statusBadge": "Decisão Interlocutória sobre PROVA",
+      "pode": [
+        "Agravo de instrumento",
+        "Pedido de reconsideração (baixo impacto)"
+      ],
+      "naoPode": [
+        "Apelar agora",
+        "Esperar a sentença sem risco"
+      ],
+      "acaoRecomendada": "Interpor Agravo de Instrumento",
+      "prazo": "15 dias úteis",
+      "fundamento": "art. 1.015, XI, CPC",
+      "risco": "Preclusão da prova",
+      "riscoLevel": "high",
+      "ctaLabel": "Checklist de Agravo"
+    }
+  },
+  {
+    "id": "rule_generic_sentenca",
+    "match": {
+      "ato": "sentenca"
+    },
+    "result": {
+      "statusBadge": "Sentença Terminativa ou Definitiva",
+      "pode": [
+        "Apelação",
+        "Embargos de Declaração (se houver omissão/contradição)"
+      ],
+      "naoPode": [
+        "Agravo de Instrumento"
+      ],
+      "acaoRecomendada": "Analisar cabimento de Apelação",
+      "prazo": "15 dias úteis (Apelação) / 5 dias úteis (Embargos)",
+      "fundamento": "art. 1.009, CPC",
+      "risco": "Trânsito em julgado",
+      "riscoLevel": "high",
+      "ctaLabel": "Checklist de Apelação"
+    }
+  },
+  {
+    "id": "rule_generic_despacho",
+    "match": {
+      "ato": "despacho"
+    },
+    "result": {
+      "statusBadge": "Despacho de Mero Expediente",
+      "pode": [
+        "Cumprir a determinação",
+        "Pedir esclarecimento simples"
+      ],
+      "naoPode": [
+        "Recorrer (regra geral - irrecorrível)"
+      ],
+      "acaoRecomendada": "Cumprir prazo ou aguardar",
+      "prazo": "Conforme determinado ou 5 dias (prazo legal)",
+      "fundamento": "art. 1.001, CPC",
+      "risco": "Tumulto processual se não cumprido",
+      "riscoLevel": "low",
+      "ctaLabel": "Checklist de Prazos"
+    }
+  },
+  {
+    "id": "fallback",
+    "match": {},
+    "result": {
+      "statusBadge": "Situação Genérica / Não Mapeada",
+      "pode": [
+        "Avaliar cabimento do recurso apropriado",
+        "Verificar intimação"
+      ],
+      "naoPode": [
+        "Perder o prazo fatal"
+      ],
+      "acaoRecomendada": "Identificar natureza do ato com cautela",
+      "prazo": "Verificar na publicação",
+      "fundamento": "Análise casuística necessária",
+      "risco": "Preclusão temporal",
+      "riscoLevel": "medium",
+      "ctaLabel": "Checklist Geral"
+    }
+  }
+]
